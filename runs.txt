@@ -1,0 +1,13 @@
+python test.py --data_dir /data/butterflies --out_dir ./runs/cnn_baseline --model cnn --img_size 128  --epochs 20 --batch_size 64
+
+python test.py --data_dir /data/butterflies --out_dir ./runs/mlp_relu_512_256 --model mlp --img_size 128 --hidden_sizes 512 256 --activation relu --optimizer adam --epochs 25 --batch_size 64 --lr 3e-4
+
+
+python test.py --data_dir /data/butterflies --out_dir ./runs/mlp_relu_512_256_128 --model mlp --img_size 128 --hidden_sizes 512 256 128 --activation relu --optimizer adam --epochs 25 --batch_size 32 --lr 3e-4
+
+python test.py --data_dir /data/butterflies --out_dir ./runs/mlp_tanh_512_256_128_32 --model mlp --img_size 128 --hidden_sizes 512 256 128 --activation tanh --optimizer adam --epochs 38 --batch_size 64 --lr 3e-4
+
+python test.py --data_dir /data/butterflies --out_dir ./runs/mlp_relu_512_256_128_64_v2 --model mlp --img_size 128 --hidden_sizes 512 256 128 --activation relu --optimizer adam --epochs 55 --batch_size 64 --lr 3e-4
+
+
+python test.py --data_dir /data/butterflies --out_dir ./runs/cnn_v2 --model cnn --img_size 128  --epochs 20 --batch_size 64
